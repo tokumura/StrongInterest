@@ -1,9 +1,6 @@
-chrome.browserAction.setBadgeText({ text: "3" });
-
-chrome.browserAction.onClicked.addListener(function(){
-  var color = localStorage['color'];
-  alert(color);
-  chrome.tabs.executeScript(null, {
-    "code": "document.body.style.backgroundColor='" + color + "'"
-  });
-})
+chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
+	var num = request.hit_num
+	chrome.browserAction.setBadgeText({ text: num });
+	chrome.pageAction.show(sender.tab.id);
+	sendResponse({tabid:sender.tab.id});
+});
