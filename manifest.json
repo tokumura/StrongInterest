@@ -5,6 +5,7 @@
   "description": "Strong Interest Plugin for Websites. (ex: groupware.)",
   "browser_action": {
     "default_title": "Strong Interest",
+    "default_popup": "popup.html",
     "default_icon": "icon.png"
   },
 
@@ -22,6 +23,7 @@
   },
     "permissions": [
     "tabs",
+    "contextMenus",
     "http://192.168.0.24/cgi-bin6/ag.exe*",
     "storage",
     "unlimitedStorage"

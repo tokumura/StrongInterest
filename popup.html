@@ -5,14 +5,15 @@
     <title>CN</title>
     <!-- Load JavaScript-->
     <script src="js/lib/jquery-2.1.3.min.js"></script>
-    <script src="js/background.js"></script>
-    <link rel="stylesheet" href="css/popup.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
   </head>
-  <body>
-    <ul>
-      <li id="red">Red</li>
-      <li id="yellow">Yellow</li>
-    </ul>
+  <body style="width:160px;">
+    <div class="row">
+      <div class="col-xs-4" style="padding:20px;">
+        <a href="javascript:void(0);" id="add_interest" class="btn btn-danger" style="width:150px;">気になる</a><br/><br/>
+        <a href="javascript:void(0);" id="remove_interest" class="btn btn-default" style="width:150px;">忘れてよし</a>
+      </div>
+    </div>
     <script src="js/myscript.js"></script>
   </body>
 </html>
