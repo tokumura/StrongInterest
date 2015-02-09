@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Strong Interest",
+  "version": "1.0",
+  "description": "Strong Interest Plugin for Websites. (ex: groupware.)",
+  "browser_action": {
+    "default_title": "Strong Interest",
+    "default_icon": "icon.png"
+  },
+
+  "options_page" : "options.html",
+
+  "icons" : {
+    "128": "icon.png"
+  },
+  "background": {
+    "scripts": ["js/lib/jquery-2.1.3.min.js", "js/background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "http://192.168.0.24/cgi-bin6/ag.exe*",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://192.168.0.24/cgi-bin6/ag.exe*"],
+      "js": ["js/lib/jquery-2.1.3.min.js", "js/highlight.js"],
+      "run_at": "document_end"
+    }
+  ]}
